@@ -1,13 +1,13 @@
-#Vending Machine Progam
-#By Uzman Karim
+#Vending Machine Program
+#By Uzman Karim, Student, DCP-ICS online a22
 #Version 1.0
 
-money = 10.00 #This money domination will be used to buy items.
+money = 10.00 #This money domination will be used to buy items!
 vending_machine = {"Bunties": 1, "Chocolate": 2, "Cola": 3, "Juice": 4, "Water": 5}
 bought_product = []
 prices = {"Bunties": "1.50", "Chocolate": "2.50", "Cola": "3.00", "Juice": "4.00", "Water": "3.50"}
 
-def purchase(needed_money,product_name):
+def purchase(needed_money,product_name): # To cater the money matter to buy one or more products!
     global money
     global bought_product
     if money >= needed_money:
@@ -17,7 +17,7 @@ def purchase(needed_money,product_name):
     else:
         print("Not enough money")
 
-def transaction(user_input):
+def transaction(user_input): # To handle the list of wished transactions for our buyer!
     global money
     if user_input == "1":
         purchase(1.50,"Bunties")
@@ -33,7 +33,7 @@ def transaction(user_input):
     else:
         print("Invalid Input")
 
-def main(): #Main Program
+def main(): #Main Program that will cater the functionality of VMP by using various selfdeveloped and inbuilt functions!
     item_list = []
     switch = True
     while switch:
@@ -72,7 +72,7 @@ def main(): #Main Program
                     choice = True
         print(" ".join(bought_product))
         print("Thank you for buying with us")
-        print("Please take the balance=", money)
+        print("Please take the balance $=", money)
 
 main()
 
